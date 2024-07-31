@@ -38,14 +38,18 @@ const SudokuBoard = ({ newGame }) => {
         {board.map((row, rowIndex) => (
           <div key={rowIndex} className="sudoku-row">
             {row.map((cell, colIndex) => (
-              <input
-                key={colIndex}
-                type="text"
-                value={cell}
-                onChange={(e) => handleChange(e, rowIndex, colIndex)}
-                maxLength="1"
-                className="sudoku-cell"
-              />
+              cell !== '' ? (
+                <div key={colIndex} className="sudoku-cell sudoku-given">{cell}</div>
+              ) : (
+                <input
+                  key={colIndex}
+                  type="text"
+                  value={cell}
+                  onChange={(e) => handleChange(e, rowIndex, colIndex)}
+                  maxLength="1"
+                  className="sudoku-cell sudoku-input"
+                />
+              )
             ))}
           </div>
         ))}

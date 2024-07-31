@@ -3,27 +3,29 @@
   gap: 5px;
   background-color: rgb(248, 147, 169);
   opacity: 0.8;
-  padding: 1%;
+  padding: 1%;align-items: center;
   justify-content: center;
   width: 90vw;
   max-width: 600px;
-  margin: auto;
+  margin: auto;text-align: center;
 }
 
 .sudoku-row {
-  display: grid;
-  gap: 5px;
+  display: grid;text-align: center;
+  gap: 5px;align-items: center;
   grid-template-columns: repeat(9, 1fr);
 }
 
 .sudoku-cell {
-  width: 100%;
+  width: 100%;  position: relative;
+  text-align: center;
   height: 0;
   padding-top: 100%;
-  text-align: center;
   font-size: 1rem;
   border: 1px solid #ddd;
-  box-sizing: border-box;
+  box-sizing: border-box;display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
