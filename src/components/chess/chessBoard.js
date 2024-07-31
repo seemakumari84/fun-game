@@ -43,7 +43,7 @@ const ChessBoard = () => {
     const result = gameCopy.move(move);
     if (result) {
       setGame(gameCopy);
-      setIsComputerTurn(false); // Switch turn to player
+      setIsComputerTurn(false); 
     } else {
       console.error('Invalid move:', move);
     }
@@ -54,7 +54,7 @@ const ChessBoard = () => {
     const result = gameCopy.move(move);
     if (result) {
       setGame(gameCopy);
-      setIsComputerTurn(true); // Switch turn to computer
+      setIsComputerTurn(true);
     } else {
       console.error('Invalid move:', move);
     }
@@ -64,29 +64,40 @@ const ChessBoard = () => {
     const move = {
       from: sourceSquare,
       to: targetSquare,
-      promotion: 'q', // Always promote to a queen for simplicity
+      promotion: 'q',
     };
     handleMove(move);
   };
 
-  return (
-    <div className="chess-board-container">
-            <div className="chess-board">
+  const resetGame = () => {
+    setGame(new Chess());
+    setGameStatus('ongoing');
+    setIsComputerTurn(false);
+  };
 
-      <Chessboard
-        position={game.fen()}
-        onPieceDrop={onPieceDrop}
-      /></div>
-      {gameStatus !== 'ongoing' && (
-        <div className="endscene show">
-          <div className="winning-sign">
-            {gameStatus === 'white_wins' && 'White Wins!'}
-            {gameStatus === 'black_wins' && 'Black Wins!'}
-            {gameStatus === 'draw' && 'Draw!'}
-          </div>
+  return (
+    <>
+      <div className="chess-board-container">
+        <div className="chess-board">
+          <Chessboard
+            position={game.fen()}
+            onPieceDrop={onPieceDrop}
+          />
         </div>
-      )}
-    </div>
+        {gameStatus !== 'ongoing' && (
+          <div className="endscene show">
+            <div className="winning-sign">
+              {gameStatus === 'white_wins' && 'White Wins!'}
+              {gameStatus === 'black_wins' && 'Black Wins!'}
+              {gameStatus === 'draw' && 'Draw!'}
+            </div>
+          </div>
+        )}
+      </div>
+      <button id="reset-button" className="reset-button" onClick={resetGame}>
+        Reset Game
+      </button>
+    </>
   );
 };
 

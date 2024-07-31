@@ -1,10 +1,29 @@
 .chess-board-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.reset-button {
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #081b31;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+}
+
+.reset-button:hover {
+  background-color: rgb(26, 99, 177);
 }
 
 .endscene {
@@ -47,6 +66,7 @@
   border-radius: 10px;
   font-size: 1.5rem;
   text-align: center;
+  z-index: 15;
 }
 
 .chess-board {
@@ -56,14 +76,24 @@
 
 @media (max-width: 768px) {
   .chess-board {
-    width: 90vw;
-    height: 90vw;
+    width: 60vw;
+    height: 80%;
+  }
+
+  .reset-button {
+    margin: 20px 0;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .chess-board {
     width: 95vw;
-    height: 95vw;
+    height: 80%;
+  }
+
+  .reset-button {
+    margin: 20px 0;
+    font-size: 12px;
   }
 }

@@ -34,7 +34,7 @@ function Navbar() {
         setIsMenuOpen(false);
     };
 
-    var name = "<Puzzle Pop/>";
+    var name = "<PuzzlePop/>";
 
     return (
         <>
@@ -47,8 +47,8 @@ function Navbar() {
                 </button>
                 <div className={`nav_right ${isMenuOpen ? "show" : ""}`}>
                     <p onClick={goToHomePage}>Home</p>
-                    <p onClick={goToTTTPage}>Tic-Tac-Toe</p>
-                    <p onClick={goToSPSPage}>Rock-Paper-Scissor</p>
+                    <p onClick={goToTTTPage}>TicTacToe</p>
+                    <p onClick={goToSPSPage}>RockPaperScissor</p>
                     <p onClick={goToChessPage}>Chess</p>
                     <p onClick={goToSudokuPage}>Sudoku</p>
                 </div>

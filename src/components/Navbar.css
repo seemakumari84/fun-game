@@ -3,16 +3,16 @@
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    width: 100%;padding: 5%;
+    width: 100%;padding: 4%;
     color: whitesmoke;overflow: hidden;
-    margin: 1%;border-radius: 10px;height: 3rem;
+    border-radius: 10px;height: 4rem;margin-right: 23px;
 }
 
 .nav_left {
     margin: 5px 0;
-    font-size: 35px;
+    font-size: 31px;
     font-weight: bold;
-    color: red;
+    color: #ff004f;
 }
 
 .nav_right {
@@ -34,7 +34,7 @@
 
 
 .navbar-toggler {
-    display: none; /* Hide the toggle button by default */
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
@@ -57,7 +57,7 @@
         justify-content: space-between;
         align-items: center;
         color: whitesmoke;
-        padding: 0 4%;
+        padding: 0 4%;height:3rem;
     }
 
     .nav_right {
@@ -74,7 +74,7 @@
     }
 
     .nav_right.show {
-        display: flex; /* Show the right section when toggled */
+        display: flex; 
     }
 
     .nav_right p {
@@ -85,6 +85,5 @@
     }
 
     .navbar-toggler {
-        display: block; /* Show the toggle button on small screens */
-    }
+        display: block; }
 }

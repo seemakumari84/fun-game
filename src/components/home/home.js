@@ -25,8 +25,8 @@ function Home() {
     
     <><div className="headline"><h1 >Select a game</h1></div>
     <div className='col'>
-      <img src={game1} alt="TTT"  onClick={handleClick} style={{ cursor: 'pointer' }} />
-      <img src={game2} alt="SPS" onClick={handleClick2} style={{ cursor: 'pointer' }} />
+      <img src={game2} alt="TTT"  onClick={handleClick} style={{ cursor: 'pointer' }} />
+      <img src={game1} alt="SPS" onClick={handleClick2} style={{ cursor: 'pointer' }} />
       <img src={game3} alt="Sudoku" onClick={handleClick3} style={{ cursor: 'pointer' }} />
       <img src={game4} alt="chess" onClick={handleClick4} style={{ cursor: 'pointer' }} />
     </div></>
